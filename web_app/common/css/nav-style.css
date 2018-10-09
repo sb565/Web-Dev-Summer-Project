@@ -1,0 +1,208 @@
+
+header {
+  width: 100%;
+  background: #970000;
+  color: white;
+  position: relative;
+  font-family: 'Times New Roman', sans-serif;
+  top: 0;
+  z-index: 5;
+}
+
+header::after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+.nav-bar{
+    background: #970000;
+}
+
+.logo {
+  float: left;
+  font-size: 2.5em;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 2%;
+}
+
+header nav{
+    padding: 2%;
+}
+
+.site-nav {
+  height: 90vh;
+  position: absolute;
+  top: 120%;
+  right: 0%;
+  background: #464655;
+  overflow: hidden;
+
+       -ms-clip-path: circle(0px at top right);
+       -o-clip-path: circle(0px at top right);  
+     -moz-clip-path: circle(0px at top right);
+  -webkit-clip-path: circle(0px at top right);
+          clip-path: circle(0px at top right);
+    
+       -ms-transition: clip-path ease-in-out 700ms;
+       -o-transition: clip-path ease-in-out 700ms;
+     -moz-transition: clip-path ease-in-out 700ms;
+  -webkit-transition: clip-path ease-in-out 700ms;
+          transition: clip-path ease-in-out 700ms;
+}
+
+.site-nav--open {
+       -ms-clip-path: circle(150% at top right);
+       -o-clip-path: circle(150% at top right);
+     -moz-clip-path: circle(150% at top right);  
+  -webkit-clip-path: circle(150% at top right);
+          clip-path: circle(150% at top right);
+}
+
+.site-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-nav li {
+  border-bottom: 1px solid #575766;
+}
+
+.site-nav li:last-child {
+  border-bottom: none;
+}
+
+.site-nav a {
+  color: #EBEBD3;
+  display: block;
+  padding: 2vh 0% 2vh 0%;
+  text-transform: uppercase; 
+  text-decoration: none;
+  font-size:2em;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  background: #E4B363;
+  color: black;
+}
+
+.site-nav--icon {
+  display: inline-block;
+  font-size: 1.5em;
+  margin-right: 1em;
+  width: 1.1em;
+  text-align: left;
+  color: rgba(0,255,255,.4);
+}
+
+
+.menu-toggle {
+  padding: 1em;
+  position: absolute;
+  top: .5em;
+  right: .5em;
+  cursor: pointer;
+}
+
+.active{
+    color: black;
+ }
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  display: block;
+  background: #EBEBD3;
+  height: 3px;
+  width: 1.75em;
+  border-radius: 3px;
+
+       -ms-transition: all ease-in-out 500ms;
+       -o-transition: all ease-in-out 500ms;
+     -moz-transition: all ease-in-out 500ms;
+  -webkit-transition: all ease-in-out 500ms;
+          transition: all ease-in-out 500ms;
+}
+
+.hamburger::before {
+       -ms-transform: translateY(-6px);
+       -o-transform: translateY(-6px);
+     -moz-transform: translateY(-6px);
+  -webkit-transform: translateY(-6px);
+          transform: translateY(-6px);
+}
+
+.hamburger::after {
+       -ms-transform: translateY(3px);
+       -o-transform: translateY(3px);
+     -moz-transform: translateY(3px);
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
+}
+
+.open .hamburger {
+       -ms-transform: rotate(45deg);
+       -o-transform: rotate(45deg);
+     -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.open .hamburger::before {
+  opacity: 0;
+}
+
+.open .hamburger::after {
+       -ms-transform: translateY(-3px) rotate(-90deg);
+       -o-transform: translateY(-3px) rotate(-90deg);
+     -moz-transform: translateY(-3px) rotate(-90deg);  
+  -webkit-transform: translateY(-3px) rotate(-90deg);
+          transform: translateY(-3px) rotate(-90deg);
+}
+
+@media (min-width: 850px) {
+
+  .hamburger{
+    display: none;
+  }  
+
+  .site-nav {
+    
+    height: auto;
+    position: relative;
+    background: transparent;
+    float: right;
+         
+         -ms-clip-path: initial;
+         -o-clip-path: initial;
+       -moz-clip-path: initial;
+    -webkit-clip-path: initial;
+            clip-path: initial;
+  }
+  
+  .site-nav li {
+    display: inline-block;
+    border: none;
+  }
+  
+  .site-nav a {
+    padding: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  
+  .site-nav a:hover,
+  .site-nav a:focus {
+    background: transparent;
+  }
+  
+  .site-nav--icon {
+    display: none;
+  }
+  
+}

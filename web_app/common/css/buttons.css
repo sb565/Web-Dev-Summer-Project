@@ -1,0 +1,33 @@
+.buttons button {
+    width: 100%;
+    text-align: left;
+    font-size: 2em;
+    border-style: none;
+    margin: 3% 0% 0.5% 0%;
+    padding: 2%;
+}
+
+.about {
+    font-size: 1.7em;
+    display: none;
+}
+
+.about1 {
+    font-size: 1.7em;
+    display: block;
+}
+
+.buttons .course-list {
+    font-size: 1.7em;
+    display: none;
+}
+
+.buttons .course-list1 {
+    font-size: 1.7em;
+    display: block;
+}
+
+.buttons button:hover {
+    background: #F5F5F5;
+    color: firebrick;
+}
